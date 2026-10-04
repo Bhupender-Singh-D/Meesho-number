@@ -1,6 +1,0 @@
-{
-  "/_not-found/page": "app/_not-found/page.js",
-  "/page": "app/page.js",
-  "/api/phone/check/route": "app/api/phone/check/route.js",
-  "/api/phone/bulk-check/route": "app/api/phone/bulk-check/route.js"
-}

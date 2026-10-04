@@ -145,7 +145,7 @@ export const PhoneVerifierForm: React.FC<PhoneVerifierFormProps> = ({
           </label>
 
           <div
-            className={`flex items-stretch rounded-2xl border transition-all duration-200 bg-white ${
+            className={`flex items-stretch h-[52px] rounded-2xl border transition-all duration-200 bg-white ${
               errors.phone
                 ? "border-rose-400 ring-4 ring-rose-50"
                 : phoneValue.length === 10 && !errors.phone
@@ -154,7 +154,7 @@ export const PhoneVerifierForm: React.FC<PhoneVerifierFormProps> = ({
             }`}
           >
             {/* Indian Country Code Prefix */}
-            <div className="flex items-center gap-1.5 px-4 bg-slate-50/80 border-r border-slate-200 text-slate-800 rounded-l-2xl select-none font-semibold text-sm">
+            <div className="flex items-center gap-2 px-4 h-full bg-slate-50/80 border-r border-slate-200 text-slate-800 rounded-l-2xl select-none font-semibold text-sm shrink-0">
               <span className="text-base" role="img" aria-label="India flag">
                 🇮🇳
               </span>
@@ -162,7 +162,7 @@ export const PhoneVerifierForm: React.FC<PhoneVerifierFormProps> = ({
             </div>
 
             {/* Input field */}
-            <div className="relative flex-1">
+            <div className="relative flex-1 h-full">
               <input
                 id="mobile-input"
                 type="tel"
@@ -174,7 +174,7 @@ export const PhoneVerifierForm: React.FC<PhoneVerifierFormProps> = ({
                 disabled={loading}
                 value={phoneValue}
                 onChange={handlePhoneInputChange}
-                className="w-full h-13 px-4 text-base sm:text-lg font-medium tracking-wider text-slate-900 placeholder:text-slate-400 placeholder:text-sm placeholder:tracking-normal focus:outline-hidden bg-transparent"
+                className="w-full h-full px-4 text-base font-medium tracking-wider text-slate-900 placeholder:text-slate-400 placeholder:text-sm placeholder:tracking-normal focus:outline-hidden bg-transparent"
                 aria-invalid={errors.phone ? "true" : "false"}
                 aria-describedby={errors.phone ? "phone-error" : undefined}
               />
@@ -220,7 +220,7 @@ export const PhoneVerifierForm: React.FC<PhoneVerifierFormProps> = ({
         <button
           type="submit"
           disabled={loading || phoneValue.length !== 10}
-          className="w-full h-13 rounded-2xl bg-gradient-to-r from-meesho-800 via-meesho-700 to-meesho-600 hover:from-meesho-900 hover:via-meesho-800 hover:to-meesho-700 text-white font-bold text-sm sm:text-base tracking-wide flex items-center justify-center gap-2 shadow-lg shadow-meesho-700/30 hover:shadow-meesho-700/40 active:scale-[0.99] transition-all disabled:opacity-50 disabled:cursor-not-allowed disabled:shadow-none cursor-pointer"
+          className="w-full h-[52px] rounded-2xl bg-gradient-to-r from-meesho-800 via-meesho-700 to-meesho-600 hover:from-meesho-900 hover:via-meesho-800 hover:to-meesho-700 text-white font-bold text-sm sm:text-base tracking-wide flex items-center justify-center gap-2 shadow-lg shadow-meesho-700/30 hover:shadow-meesho-700/40 active:scale-[0.99] transition-all disabled:opacity-50 disabled:cursor-not-allowed disabled:shadow-none cursor-pointer"
         >
           {loading ? (
             <>
